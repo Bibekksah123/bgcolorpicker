@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <select onchange="change(this.value)">
+    <option value="color">color</option>
+    <option value="red">red</option>
+  </select>
+  <input type="color" id="colo">
+  <script>
+    function change(value){
+      let body=document.querySelector('body');
+      body.style.backgroundColor=value;
+    }
+    let color=document.querySelector('#colo');
+    color.addEventListener("change",()=>{
+      document.body.style.backgroundColor=color.value;
+    })
+  </script>
+</body>
+</html>
